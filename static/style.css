@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #f0f0f0; /* Pastel gray */
+    --secondary-color: #ffffff; /* White */
+    --accentuate-color: #d9d9d9; /* Light gray for accents */
+    --font-color: #333333; /* Dark gray for text */
+}
+
+body {
+    background-color: var(--primary-color); /* Pastel gray */
+    color: var(--font-color);
+    font-family: 'Circular', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 100px;
+    overflow-y: auto;
+}
+
+.navbar {
+    background-color: var(--secondary-color); /* White */
+    color: var(--font-color) !important;
+    padding: 20px 20px;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: var(--font-color) !important;
+}
+
+.nav-link {
+    color: var(--font-color) !important;
+}
+
+.footer {
+    background-color: var(--secondary-color); /* White */
+    color: var(--font-color);
+    padding: 20px 0px 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--accentuate-color); /* Light gray */
+    border-color: var(--accentuate-color);
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    border-radius: 30px; /* Rounded button for a soft look */
+    color: var(--font-color);
+}
+
+.btn-secondary {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    border-radius: 30px;
+}
+
+.btn-primary:hover {
+    background-color: var(--font-color); /* Dark gray on hover */
+    border-color: var(--font-color);
+}
+
+.text-accent {
+    color: var(--accentuate-color);
+}
+
+.header-section {
+    background-color: var(--primary-color); /* Pastel gray */
+    color: var(--font-color);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    border-radius: 10px; /* Add rounded corners to the card */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-container {
+    padding: 50px 15px;
+    background-color: var(--primary-color); /* Pastel gray */
+}

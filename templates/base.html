@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Pastel gray */
+            font-family: 'Circular', 'Helvetica Neue', Arial, sans-serif;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.7); /* White with transparency */
+            backdrop-filter: blur(10px);
+            border-radius: 15px; /* Softer rounded corners */
+            padding: 25px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+            transition: all 0.3s ease;
+        }
+        .glassmorphism:hover {
+            transform: translateY(-8px);
+        }
+        .app-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px; /* Softer rounded corners for images */
+        }
+        .navbar {
+            background-color: #ffffff; /* White for the navbar */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            color: #333333 !important; /* Dark gray for brand */
+        }
+        .navbar-toggler-icon {
+            color: #333333 !important; /* Dark gray for toggler */
+        }
+        .footer {
+            background-color: #ffffff; /* White for the footer */
+            color: #333333; /* Dark gray for footer text */
+            padding: 20px 0;
+            text-align: center;
+        }
+        h5 {
+            color: #333333; /* Dark gray for headings */
+        }
+        p {
+            color: #666666; /* Medium gray for paragraph text */
+        }
+    </style>
+    <title>{% block title %}Onzengko Clothing{% endblock %}</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="{% url 'base_app1' %}">OZC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+    
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 150px);">
+        {% block content %}
+        <div class="row text-center">
+            <div class="col-md-6 mb-4">
+                <div class="glassmorphism p-4">
+                    <a href="{% url 'home_app1' %}">
+                        <img src="{% static 'app1/images/app1_image.jpg' %}" alt="App1" class="app-image">
+                        <h5 class="mt-2">OZC SHOP</h5>
+                        <p>Click to explore App1 features.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="glassmorphism p-4">
+                    <a href="{% url 'home_app2' %}">
+                        <img src="{% static 'app2/images/app2_image.jpg' %}" alt="App2" class="app-image">
+                        <h5 class="mt-2">OZC FINDS</h5>
+                        <p>Click to explore App2 features.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Est.2023. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
